@@ -17,7 +17,6 @@ public class ResourcesUI : MonoBehaviour {
 
         int index = 0;
         foreach (ResourceTypeSO resourceType in resourceTypeList.list) {
-            Debug.Log(resourceType);
             Transform resourceTransform = Instantiate(resourceTemplate, transform);
             resourceTransform.gameObject.SetActive(true);
 

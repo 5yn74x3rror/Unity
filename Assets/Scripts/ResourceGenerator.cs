@@ -3,28 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceGenerator : MonoBehaviour {
-    private BuildingTypeSO buildingType;
-    private Dictionary<ResourceGeneratorData, float> timerDict;
-    private Dictionary<ResourceGeneratorData, float> timerMaxDict;
+    private ResourceGeneratorData resourceGeneratorData;
+    private float timer;
+    private float timerMax;
 
     private void Awake() {
-        buildingType = GetComponent<BuildingTypeHolder>().buildingType;
-        timerDict = new Dictionary<ResourceGeneratorData, float>();
-        timerMaxDict = new Dictionary<ResourceGeneratorData, float>();
- 
-        foreach (ResourceGeneratorData resourceGeneratorData in buildingType.resourceGeneratorData) {
-            timerDict[resourceGeneratorData] = 0f;
-            timerMaxDict[resourceGeneratorData] = resourceGeneratorData.timerMax;
+        resourceGeneratorData = GetComponent<BuildingTypeHolder>().buildingType.resourceGeneratorData;
+        timerMax = resourceGeneratorData.timerMax;
+    }
+
+    private void Start() {
+        int nearbyResourceAmount = 0;
+        Collider2D[] collider2dArray = Physics2D.OverlapCircleAll(
+            transform.position,
+            resourceGeneratorData.resourceDetectionRadius
+        );
+        foreach (Collider2D collider2d in collider2dArray) {
+            ResourceNode resourceNode = collider2d.GetComponent<ResourceNode>();
+            if (resourceNode != null) {
+                if (resourceNode.resourceType == resourceGeneratorData.resourceType) {
+                    nearbyResourceAmount++;
+                }
+            }
         }
+
+        nearbyResourceAmount = Mathf.Clamp(nearbyResourceAmount, 0, resourceGeneratorData.maxResourceAmount);
+
+        if (nearbyResourceAmount == 0) {
+            // disable resource generator
+            enabled = false;
+        } else {
+            timerMax = (resourceGeneratorData.timerMax / 2f) + 
+            (resourceGeneratorData.timerMax * 
+            (1 - (float)nearbyResourceAmount / resourceGeneratorData.maxResourceAmount));
+        }
+
+        Debug.Log("nearbyResourceAmount:" + nearbyResourceAmount + ", timerMax:" + timerMax);
     }
  
     private void Update() {
-        foreach (ResourceGeneratorData resourceGeneratorData in buildingType.resourceGeneratorData) {
-            timerDict[resourceGeneratorData] -= Time.deltaTime;
-            if (timerDict[resourceGeneratorData] <= 0f) {
-                timerDict[resourceGeneratorData] += timerMaxDict[resourceGeneratorData];
-                ResourceManager.Instance.AddResource(resourceGeneratorData.resourceType, 1);
-            }
+        timer -= Time.deltaTime;
+        if (timer <= 0f) {
+            timer += timerMax;
+            ResourceManager.Instance.AddResource(resourceGeneratorData.resourceType, 1);
         }
     }
 }

@@ -15,6 +15,8 @@ MonoBehaviour:
   nameString: Gold Harvester
   prefab: {fileID: 2031540852460653021, guid: a34f7623a8633ca42819f37aa9420cd6, type: 3}
   resourceGeneratorData:
-  - timerMax: 0.2
+    timerMax: 0.5
     resourceType: {fileID: 11400000, guid: 7d476327650978e45bdac54f2bc40ca5, type: 2}
+    resourceDetectionRadius: 7
+    maxResourceAmount: 3
   sprite: {fileID: 21300000, guid: 8ead931dd91bff8489e75de9c414f17f, type: 3}

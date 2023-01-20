@@ -6,6 +6,7 @@ public class SpritePositionSortingOrder : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
 
     [SerializeField] private bool runOnce;
+    [SerializeField] private float positionOffset;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -13,7 +14,7 @@ public class SpritePositionSortingOrder : MonoBehaviour {
 
     private void LateUpdate() {
         float precision = 5f;
-        spriteRenderer.sortingOrder = -(int)(transform.position.y * precision);
+        spriteRenderer.sortingOrder = -(int)((transform.position.y + positionOffset) * precision);
 
         if (runOnce) {
             Destroy(this);

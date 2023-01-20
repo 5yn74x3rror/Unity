@@ -15,31 +15,31 @@ public class ResourceManager : MonoBehaviour {
         ResourceTypeListSO resourceTypeList = Resources.Load<ResourceTypeListSO>(typeof(ResourceTypeListSO).Name);
 
         foreach (ResourceTypeSO resourceType in resourceTypeList.list) {
-            resourceAmountDictionary[resourceType] = 10;
+            resourceAmountDictionary[resourceType] = 0;
         }
 
-        TestResourcesAmount();
+        // TestResourcesAmount();
     }
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.A)) {
             ResourceTypeListSO resourceTypeList = Resources.Load<ResourceTypeListSO>(typeof(ResourceTypeListSO).Name);
             AddResource(resourceTypeList.list[0], 10);
-            TestResourcesAmount();
+            // TestResourcesAmount();
         }
     }
 
-    private void TestResourcesAmount() {
-        foreach (ResourceTypeSO resourceType in resourceAmountDictionary.Keys) {
-            Debug.Log(resourceType.nameString + ": " + resourceAmountDictionary[resourceType]);
-        }
-    }
+    // private void TestResourcesAmount() {
+    //     foreach (ResourceTypeSO resourceType in resourceAmountDictionary.Keys) {
+    //         Debug.Log(resourceType.nameString + ": " + resourceAmountDictionary[resourceType]);
+    //     }
+    // }
 
     public void AddResource(ResourceTypeSO resourceType, int amount) {
         resourceAmountDictionary[resourceType] += amount;
 
         OnResourceAmountChange?.Invoke(this, EventArgs.Empty);
-        TestResourcesAmount();
+        // TestResourcesAmount();
     }
 
     public int GetResourceAmount(ResourceTypeSO resourceType) {
