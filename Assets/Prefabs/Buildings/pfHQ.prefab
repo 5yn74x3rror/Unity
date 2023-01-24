@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2031540852460653021}
   - component: {fileID: -7296449451765187251}
   - component: {fileID: 5189339004208650587}
-  - component: {fileID: 1985489644826623846}
-  - component: {fileID: 1531985220788919542}
+  - component: {fileID: 16757484465923407}
+  - component: {fileID: 6746849230068412321}
   m_Layer: 0
-  m_Name: pfGoldHaverster
+  m_Name: pfHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,8 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2465a7049e9f3489a55a17e9dda766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingType: {fileID: 11400000, guid: 87a29740ac567bb47a07a95f6d044881, type: 2}
---- !u!114 &1985489644826623846
+  buildingType: {fileID: 11400000, guid: 43977ec3099b33b458ce158e159ab066, type: 2}
+--- !u!114 &16757484465923407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runOnce: 1
   positionOffset: 0
---- !u!61 &1531985220788919542
+--- !u!61 &6746849230068412321
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,7 +88,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06692457, y: -0.15057975}
+  m_Offset: {x: 0.038173676, y: -0.3257432}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -99,7 +99,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.9524107, y: 4.1789117}
+  m_Size: {x: 6.5129337, y: 4.5292387}
   m_EdgeRadius: 0
 --- !u!1 &4876689052610256709
 GameObject:
@@ -174,7 +174,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ead931dd91bff8489e75de9c414f17f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7030b8e3eb49e8440ae8eb3ec8b45d05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

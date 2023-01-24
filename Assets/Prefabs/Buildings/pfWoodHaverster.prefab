@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -7296449451765187251}
   - component: {fileID: 5189339004208650587}
   - component: {fileID: 16757484465923407}
+  - component: {fileID: 6746849230068412321}
   m_Layer: 0
   m_Name: pfWoodHaverster
   m_TagString: Untagged
@@ -74,6 +75,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runOnce: 1
   positionOffset: 0
+--- !u!61 &6746849230068412321
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986536207254755810}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06692457, y: -0.15057975}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.9524107, y: 4.1789117}
+  m_EdgeRadius: 0
 --- !u!1 &4876689052610256709
 GameObject:
   m_ObjectHideFlags: 0
