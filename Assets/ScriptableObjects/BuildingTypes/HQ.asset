@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: HQ
   m_EditorClassIdentifier: 
   nameString: HQ
-  prefab: {fileID: 0}
+  prefab: {fileID: 2031540852460653021, guid: 5933d80f6bccbab4c8ab062735e3a017, type: 3}
   resourceGeneratorData:
-    timerMax: 0
-    resourceType: {fileID: 0}
-    resourceDetectionRadius: 0
-    maxResourceAmount: 0
-  sprite: {fileID: 0}
+    timerMax: 1
+    resourceType: {fileID: 11400000, guid: c29bd38c1f45b4343ace3e33cf16be1c, type: 2}
+    resourceDetectionRadius: 7
+    maxResourceAmount: 7
+  sprite: {fileID: 21300000, guid: 7030b8e3eb49e8440ae8eb3ec8b45d05, type: 3}
   minContructionRadius: 0
