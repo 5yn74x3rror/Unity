@@ -10,4 +10,5 @@ public class BuildingTypeSO : ScriptableObject {
     public ResourceGeneratorData resourceGeneratorData;
     public Sprite sprite;
     public float minContructionRadius;
+    public ResourceAmount[] constructionResourceCostArray;
 }
