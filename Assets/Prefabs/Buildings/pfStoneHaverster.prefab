@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1125878981446630602}
   - component: {fileID: 6870786007687103076}
   - component: {fileID: 9211516776626170730}
+  - component: {fileID: -9065223643201535261}
   m_Layer: 0
   m_Name: pfStoneHaverster
   m_TagString: Untagged
@@ -102,6 +103,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.9524107, y: 4.1789117}
   m_EdgeRadius: 0
+--- !u!114 &-9065223643201535261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986536207254755810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f78758810c51745b68efc6f0b397fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3044652581548996170
 PrefabInstance:
   m_ObjectHideFlags: 0
