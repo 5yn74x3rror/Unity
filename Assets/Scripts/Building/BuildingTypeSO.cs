@@ -11,6 +11,7 @@ public class BuildingTypeSO : ScriptableObject {
     public Sprite sprite;
     public float minContructionRadius;
     public ResourceAmount[] constructionResourceCostArray;
+    public int healthAmountMax;
 
     public string GetConstructionResourceCostString() {
         string str = "";
