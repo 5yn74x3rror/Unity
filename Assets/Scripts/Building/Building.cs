@@ -10,7 +10,6 @@ public class Building : MonoBehaviour {
     private void Awake() {
         buildingType = GetComponent<BuildingTypeHolder>().buildingType;
         healthSystem = GetComponent<HealthSystem>();
-        Debug.Log(buildingType.healthAmountMax + ", " + buildingType.nameString);
         healthSystem.SetHealtAmountMax(buildingType.healthAmountMax, true);
 
         healthSystem.OnDied += DestroyBuilding;
